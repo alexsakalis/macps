@@ -959,40 +959,88 @@ section {
 /* Consent */
 .contact-form-wrapper form .consent-label {
   font-size: 0.95rem;
-  color: #374151;
+  color: #334155;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   gap: 12px;
   width: 100%;
 
-  /* Polished container feel */
+  /* Premium, minimal container */
   background: #f8fafc;
   border: 1px solid #e5e7eb;
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 12px 14px;
   margin-top: 10px;
 
-  line-height: 1.4;
+  line-height: 1.45;
+  letter-spacing: 0.1px;
   cursor: pointer;
   user-select: none;
+
+  /* Micro-interactions */
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease,
+    background 0.18s ease;
 }
 
+/* Slight lift on hover (desktop) */
 .contact-form-wrapper form .consent-label:hover {
   border-color: #cbd5e1;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+  transform: translateY(-1px);
 }
 
+/* Checkbox sizing + brand color */
 .contact-form-wrapper form .consent-label input[type="checkbox"] {
   width: 18px;
   height: 18px;
-  margin: 0;
+  margin: 2px 0 0 0;
   flex: 0 0 auto;
   accent-color: #007BFF;
+  cursor: pointer;
+
+  /* Smooth check interaction */
+  transition: transform 0.12s ease, box-shadow 0.18s ease;
 }
 
-.contact-form-wrapper form .consent-label input[type="checkbox"]:focus-visible {
-  outline: 2px solid rgba(0, 123, 255, 0.35);
-  outline-offset: 2px;
+/* Subtle check animation */
+.contact-form-wrapper form .consent-label input[type="checkbox"]:checked {
+  animation: consentCheckPop 180ms ease-out;
+  box-shadow: 0 0 0 6px rgba(0, 123, 255, 0.10);
+}
+
+@keyframes consentCheckPop {
+  0% { transform: scale(1); }
+  60% { transform: scale(1.12); }
+  100% { transform: scale(1); }
+}
+
+/* Accessible focus ring when tabbing */
+.contact-form-wrapper form .consent-label:focus-within {
+  border-color: rgba(0, 123, 255, 0.55);
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.18);
+}
+
+/* Make any link inside consent look like a proper policy link */
+.contact-form-wrapper form .consent-label a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-form-wrapper form .consent-label a:hover {
+  text-decoration: underline;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .contact-form-wrapper form .consent-label,
+  .contact-form-wrapper form .consent-label input[type="checkbox"] {
+    transition: none;
+  }
+  .contact-form-wrapper form .consent-label input[type="checkbox"]:checked {
+    animation: none;
+  }
 }
 
 /* Footer */
@@ -1125,10 +1173,10 @@ footer {
   }
 
   /* ✅ Center consent label block while keeping text readable */
-  .consent-label {
+  .contact-form-wrapper form .consent-label {
+    align-items: flex-start;
     justify-content: flex-start;
     text-align: left;
-    align-items: flex-start;
   }
 
   .contact-video {
