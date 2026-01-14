@@ -1,8 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
   <url>
     <loc>https://macps.ca/</loc>
-    <lastmod>2025-06-06</lastmod>
     <priority>1.0</priority>
   </url>
+
+  <!-- Core Pages -->
+  <url>
+    <loc>https://macps.ca/payment-processing</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://macps.ca/pricing</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://macps.ca/about</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://macps.ca/contact</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Services -->
+  <url>
+    <loc>https://macps.ca/services</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://macps.ca/services/credit-card-processing</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://macps.ca/services/debit-interac</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://macps.ca/services/pos-systems</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://macps.ca/services/mobile-payments</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://macps.ca/services/ecommerce-payments</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://macps.ca/services/virtual-terminals</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Locations -->
+  <url>
+    <loc>https://macps.ca/locations</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://macps.ca/locations/montreal</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://macps.ca/locations/quebec</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://macps.ca/locations/laval</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://macps.ca/locations/canada</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Trust Pages -->
+  <url>
+    <loc>https://macps.ca/faq</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://macps.ca/privacy-policy</loc>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://macps.ca/terms-of-service</loc>
+    <priority>0.4</priority>
+  </url>
+
 </urlset>
